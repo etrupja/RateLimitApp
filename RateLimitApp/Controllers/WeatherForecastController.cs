@@ -1,9 +1,11 @@
 using Microsoft.AspNetCore.Mvc;
+using System.Xml.Linq;
 
 namespace RateLimitApp.Controllers
 {
     [ApiController]
     [Route("[controller]")]
+    //[Throttle(Name = "TestThrottle", Seconds = 5, Requests = 5)]
     public class WeatherForecastController : ControllerBase
     {
         private static readonly string[] Summaries = new[]
